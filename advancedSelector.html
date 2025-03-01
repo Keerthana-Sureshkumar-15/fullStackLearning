@@ -1,53 +1,102 @@
 <html>
-    <head>
-        <title>Selectors</title>
-        <style>
-            p{
-                color: green;
-            }
 
-            .highlight{
-                background-color: yellow;
-            }
-            #main-heading{
-                color: blue;
-            }
-            .textlarge{
-                font-size: x-large;
-            }
+<head>
+    <title>Advanced Selector-lab 3 excercise</title>
+    <style>
+         /* Grouping selector */
+        h1, h2, h3{ 
+            color: darkblue;
+        }
+        /* Desecndant selector */
+        div p { 
+            color: red;
+        }
+        /* Child selctor */
+        section>p {
+            background-color: lightblue;
+        }
 
-        </style>
-    </head>
-    <body>
+        /* Adjacent sibling selctor  */
+        h2+p {
+            background-color: gray;
+        }
+        /* General sibling selctor */
+        h3~p {
+            background-color: lightpink;
+        }
+
+        .textlarge {
+            font-size: x-large;
+        }
+        .highlight{
+            background-color:aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="highlight textlarge">Advanced Selctors</h1>
+    <h4>Types of advanced selectors</h4>
+    <p>
+        There are some advanced selectors types avalible.
+    </p>
+    <ol>
+        <li>Grouping selectors</li>
+        <li>Desecndant Selector</li>
+        <li>Child selectors</li>
+        <li>Adjecent Sibling selectors</li>
+        <li>General sibling selector</li>
+    </ol>
+    </div>
+    <div>
+        <h1>Grouping selctor</h1>
+        <p>CSS grouping selector is used to select multiple elements and style them together.</p>
         <div>
-            <h3 id="main-heading" class="textlarge">Selectors and styling</h3>
-            <h4 class="highlight textlarge">Types of selectors</h4>
-            <p>
-               there are some selectors types avalible
-            </p>
-            <ol  class="highlight">
-                <li>Basic selector</li>
-                <li>Element Selector</li> 
-                <li>class selectors</li>
-                <li>ID selectors</li>
-                <li>Universal selector</li>
-            </ol>
+            <P>To grouping we need to use , to seperate selectors</P>
         </div>
-        <p>Based on priority this styles will apply</p>
-        <div>
-            <h1 class="highlight textlarge">Advanced Selctors</h1>
-            <h4 id="main-heading" >Types of advanced selectors</h4>
-            <p>
-               there are some selectors types avalible
-            </p>
-            <ol  class="highlight">
-                <li>Grouping selectors</li>
-                <li>Desecndant Selector</li> 
-                <li>Child selectors</li>
-                <li>Adjecent Sibling selectors</li>
-                <li>General sibling selector</li>
-            </ol>
-        </div>
+    </div>
 
-    </body>
+    <div>
+        <h1>Desecndant Selector</h1>
+        <p>The descendant selector (element element) targets all descendant elements, including children, grandchildren,
+            and further nested elements, of a specified element. </p>
+        <div>
+            <P>To use descendant selctor we need to use space between the selectors to seperate</P>
+        </div>
+    </div>
+    <p>This selector matches any element that is a descendant, not just direct children.</p>
+
+    <section>
+        <h1>Child Selector</h1>
+        <p>The child selector (element > element) is used to select elements that are direct children of a specified
+            element. This means that only elements immediately nested inside the parent element are selected. </p>
+        <span>
+            <p>Elements that are not direct children of the specified parent, are not selected</p>
+        </span>
+        <P>To use child selctor we need to use > symbol between the selectors to seperate</P>
+    </section>
+
+    <div>
+        <h2>Adjacent sibling Selector</h2>
+        <p>The CSS next-sibling combinator (+) is used to select an element that is placed immediately after another
+            specific element.</p>
+        <P>To use child selctor we need to use + symbol between the selectors to seperate</P>
+        <span>
+            <p>matches the second element only if it immediately follows the first element, and both are children of the
+                same parent element</p>
+        </span>
+    </div>
+
+    <section>
+        <h3>General sibling Selector</h3>
+        <p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+        <div>
+            <P>To use child selctor we need to use ~ symbol between the selectors to seperate</P>
+        </div>
+        <p>In other words, unlike the Adjacent Sibling selector which selects only the elements that immediately follow
+            a specific element, the General Sibling Selector selects the element that shares the same parent element
+            regardless of them being adjacent or not</p>
+    </section>
+</body>
+
 </html>

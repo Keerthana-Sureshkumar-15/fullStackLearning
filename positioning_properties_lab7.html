@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Lab 4: Positioning and Z-Index</title>
+
+</head>
+<style>
+    .container{
+        position: relative;
+    }
+    .child{
+        position: absolute;
+        padding-top: 50px;
+        padding-left: 30px;
+        background-color: bisque;
+    }
+    .overlap{
+        position: absolute;
+        z-index: 1;
+        background-color: aqua;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="child">Child Box</div>
+        <div class="overlap">Overlapping Box</div>
+    </div>
+</body>
+</html>

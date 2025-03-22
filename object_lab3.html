@@ -1,0 +1,86 @@
+<html>
+<h1>Working with object</h1>
+<h3>Employee Details</h3>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td id="name">
+                    employee.name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Id :
+                </td>
+                <td id="empId">
+                    employee.id
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Designation:
+                </td>
+                <td id="role">
+                    employee.Designation
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Salary:
+                </td>
+                <td id="salary">
+                    employee.salary
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="displayEmpDetails()">Click to view updated details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="updatedDetails" style="font-size: large; color:red;">Click the button to display the current data of employee
+</div>
+
+
+<body>
+    <script>
+        const employee = {
+            name: 'Keerthana',
+            empId: '12345',
+            designation: 'developer',
+            salary: 25000
+        }
+
+        function giveRaise() {
+            return employee.salary = employee.salary + 25000
+        }
+        function changeDesignation() {
+            return employee.designation = "Senior developer"
+        }
+        function displayEmpDetails() {
+            giveRaise();
+            changeDesignation();
+            currentDetails()
+            console.log("Emp updated details", employee)
+        }
+        function showAvailbleDetails() {
+            document.getElementById("name").innerHTML = employee.name
+            document.getElementById("empId").innerHTML = employee.empId
+            document.getElementById("role").innerHTML = employee.designation
+            document.getElementById("salary").innerHTML = employee.salary
+        }
+        function currentDetails() {
+            document.getElementById("updatedDetails").innerHTML = "Currently" + " " + employee.name + " " + "working as a " + employee.designation + " & her salary is " + employee.salary
+        }
+        showAvailbleDetails()
+    </script>
+</body>
+
+</html>

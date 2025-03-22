@@ -1,0 +1,57 @@
+<html>
+<h1>Working with Array</h1>
+<h3>Employee Details</h3>
+<div>
+    Total employees working currently: <span id="total"></span>
+</div>
+
+<button onclick="currentEmployees()">Click to display details</button>
+<button onclick="addNewEmployee()">Click to add</button>
+<button onclick="removeoneEmployee()">Click to Remove</button>
+</div>
+
+
+<body>
+    <script>
+        const employeeDetails = [{
+            name: 'Keerthana',
+            empId: '12345',
+            designation: 'developer',
+            salary: 25000
+        },
+        {
+            name: 'Shalini',
+            empId: '67890',
+            designation: 'tester',
+            salary: 25000
+        },]
+
+        function addNewEmployee() {
+            const newEmployee = {
+                name: 'Geetha',
+                empId: '123',
+                designation: 'Tech lead',
+                salary: 50000
+            }
+            employeeDetails.push(newEmployee)
+            currentEmployees()
+            document.getElementById("total").innerHTML = employeeDetails.length
+        }
+
+        function currentEmployees() {
+            return employeeDetails.forEach((emp, index) => {
+                console.log("employes details", emp)
+            }
+            )
+        }
+        function removeoneEmployee() {
+            employeeDetails.pop();
+            currentEmployees()
+            document.getElementById("total").innerHTML = employeeDetails.length
+
+        }
+        document.getElementById("total").innerHTML = employeeDetails.length
+    </script>
+</body>
+
+</html>
